@@ -6,7 +6,7 @@ namespace TfLOpenApiService
     {
         protected static readonly string scheme = "https";
         protected static readonly string host = "api.tfl.gov.uk";
-        protected static readonly string app_key = "15670729b28d4ee091416441040d366f";
+        protected static readonly string app_key = "";
 
         public abstract Uri GetUri(string id);
 
