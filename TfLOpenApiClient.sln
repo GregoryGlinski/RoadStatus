@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F08D7A58-B047-4477-8F52-53AF1C986DBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0255669B-CD3C-445E-8852-8BD6687A5970}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericServices", "src\GenericServices\GenericServices.csproj", "{BF931284-DAE8-4BDC-8EBE-E87A86423828}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericServices.Tests", "tests\GenericServices.Tests\GenericServices.Tests.csproj", "{02C00369-D962-4A1A-907D-FF58AC22DE6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfLConsoleApp.Tests", "tests\TfLConsoleApp.Tests\TfLConsoleApp.Tests.csproj", "{8B1DFEA7-088B-4D0A-ABBF-FDA20A745A78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfLOpenApiService.Tests", "tests\TfLOpenApiService.Tests\TfLOpenApiService.Tests.csproj", "{507B806E-0516-49EC-A627-20DEFACF288E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfLOpenApiService", "src\TfLOpenAPIService\TfLOpenApiService.csproj", "{02FAAA90-36D2-46B8-A28D-A16EA8B38796}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{2775BAFA-3B17-4828-8F50-7C8B4DDE9094}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoadStatus", "src\RoadStatus\RoadStatus.csproj", "{DFED3CC8-B38A-4318-BF27-57D6A6BC9AAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF931284-DAE8-4BDC-8EBE-E87A86423828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF931284-DAE8-4BDC-8EBE-E87A86423828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF931284-DAE8-4BDC-8EBE-E87A86423828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF931284-DAE8-4BDC-8EBE-E87A86423828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C00369-D962-4A1A-907D-FF58AC22DE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C00369-D962-4A1A-907D-FF58AC22DE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C00369-D962-4A1A-907D-FF58AC22DE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C00369-D962-4A1A-907D-FF58AC22DE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B1DFEA7-088B-4D0A-ABBF-FDA20A745A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1DFEA7-088B-4D0A-ABBF-FDA20A745A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1DFEA7-088B-4D0A-ABBF-FDA20A745A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1DFEA7-088B-4D0A-ABBF-FDA20A745A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507B806E-0516-49EC-A627-20DEFACF288E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507B806E-0516-49EC-A627-20DEFACF288E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507B806E-0516-49EC-A627-20DEFACF288E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507B806E-0516-49EC-A627-20DEFACF288E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02FAAA90-36D2-46B8-A28D-A16EA8B38796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02FAAA90-36D2-46B8-A28D-A16EA8B38796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02FAAA90-36D2-46B8-A28D-A16EA8B38796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02FAAA90-36D2-46B8-A28D-A16EA8B38796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFED3CC8-B38A-4318-BF27-57D6A6BC9AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFED3CC8-B38A-4318-BF27-57D6A6BC9AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFED3CC8-B38A-4318-BF27-57D6A6BC9AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFED3CC8-B38A-4318-BF27-57D6A6BC9AAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF931284-DAE8-4BDC-8EBE-E87A86423828} = {0255669B-CD3C-445E-8852-8BD6687A5970}
+		{02C00369-D962-4A1A-907D-FF58AC22DE6A} = {F08D7A58-B047-4477-8F52-53AF1C986DBB}
+		{8B1DFEA7-088B-4D0A-ABBF-FDA20A745A78} = {F08D7A58-B047-4477-8F52-53AF1C986DBB}
+		{507B806E-0516-49EC-A627-20DEFACF288E} = {F08D7A58-B047-4477-8F52-53AF1C986DBB}
+		{02FAAA90-36D2-46B8-A28D-A16EA8B38796} = {0255669B-CD3C-445E-8852-8BD6687A5970}
+		{DFED3CC8-B38A-4318-BF27-57D6A6BC9AAF} = {0255669B-CD3C-445E-8852-8BD6687A5970}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38AA4DCB-0427-4C93-A57E-E67A0AF8F536}
+	EndGlobalSection
+EndGlobal
