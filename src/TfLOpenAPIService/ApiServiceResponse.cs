@@ -4,10 +4,10 @@ namespace TfLOpenApiService
 {
     public class ApiServiceResponse<T> : IApiServiceResponse<T>
     {
-        bool _immutable = false;
-        ResponseStatusCode _responseStatusCode = ResponseStatusCode.Unknown;
-        Exception _exception;
-        T _instance;
+        private bool _immutable = false;
+        private ResponseStatusCode _responseStatusCode = ResponseStatusCode.Unknown;
+        private Exception _exception;
+        private T _instance;
 
         public bool Initialized { get { return _immutable; } }
         public ResponseStatusCode ResponseStatusCode
