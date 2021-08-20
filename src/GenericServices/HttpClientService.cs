@@ -46,6 +46,3 @@ namespace GenericServices
         }
     }
 }
-
-//return "[{\"$type\":\"Tfl.Api.Presentation.Entities.RoadCorridor, Tfl.Api.Presentation.Entities\",\"id\":\"a24\",\"displayName\":\"A24\",\"statusSeverity\":\"Good\",\"statusSeverityDescription\":\"No Exceptional Delays\",\"bounds\":\"[[-0.23393, 51.33958],[-0.10287,51.49159]]\",\"envelope\":\"[[-0.23393, 51.33958],[-0.23393,51.49159],[-0.10287,51.49159],[-0.10287,51.33958],[-0.23393,51.33958]]\",\"url\":\" / Road / a24\"}]";
-

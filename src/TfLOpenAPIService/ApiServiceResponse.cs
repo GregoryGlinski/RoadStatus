@@ -60,13 +60,4 @@ namespace TfLOpenApiService
             MakeImmutable();
         }
     }
-
-    public interface IApiServiceResponse<T>
-    {
-        public bool Initialized { get; }
-        public ResponseStatusCode ResponseStatusCode { get; }
-        public Exception Exception { get; }
-        public T Instance { get; }
-
-    }
 }
