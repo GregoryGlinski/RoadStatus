@@ -13,7 +13,6 @@ namespace TfLOpenApiService
            
             //Add path and query specific to a road request
             uriBuilder.Path = api + '/' + id;
-            uriBuilder.Query = "app_key=" + app_key;
 
             return uriBuilder.Uri;
         }

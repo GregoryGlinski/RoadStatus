@@ -15,6 +15,7 @@ namespace TfLOpenApiService
             UriBuilder uriBuilder = new UriBuilder();
             uriBuilder.Scheme = scheme;
             uriBuilder.Host = host;
+            uriBuilder.Query = "app_key=" + app_key;
 
             return uriBuilder;
         }
