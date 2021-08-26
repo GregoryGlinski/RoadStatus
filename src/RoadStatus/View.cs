@@ -16,14 +16,20 @@ namespace TfLConsoleApp
     {
         public void Display(List<string> output)
         {
+            if (output == null)
+                throw new ArgumentException("Ouput to console is null");
+
             foreach(string line in output)
             {
-                Console.WriteLine(line);
+                Display(line);
             }
         }
 
         public void Display(string output)
         {
+            if (output == null)
+                throw new ArgumentException("Ouput to console is null");
+
             Console.WriteLine(output);
         }
     }

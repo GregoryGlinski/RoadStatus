@@ -7,9 +7,8 @@ namespace GenericServices
     public class HttpClientService
     {
         //Favouring the creation of a single static instance of an HTTPClient over multiple instances wrapped in a using statement to avoid socket creation and deletion issues.
-        static readonly HttpClient client = new HttpClient();
-        
-        
+        private static readonly HttpClient client = new HttpClient();
+
         public static async Task<HttpResponseMessage> SendRequest(Uri uri)
         {
             HttpResponseMessage response;
@@ -20,17 +19,12 @@ namespace GenericServices
 
                 response = await client.GetAsync(uri);
             }
-            catch (HttpRequestException e)
-            {
-                Console.WriteLine("\nException Caught!");
-                Console.WriteLine("Message :{0} ", e.Message);
-
-                throw;
-            }
             catch(Exception e)
             {
+                //Rethrow to caller
                 throw;
             }
+
             return response;
         }
 

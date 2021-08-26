@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+using Microsoft.Extensions.Logging;
+
 using TfLOpenApiService;
 
 namespace TfLConsoleApp
@@ -16,6 +18,7 @@ namespace TfLConsoleApp
     {
         private readonly IView _view;
         private IApiService<Road> _service;
+        private ILogger<RoadStatusPresenter> _logger;
 
         /// <summary>
         /// The view and service (model) are injected, decoupling their specific implementations from this class.
@@ -23,9 +26,16 @@ namespace TfLConsoleApp
         /// <param name="view"></param>
         /// <param name="apiService"></param>
         public RoadStatusPresenter(IView view, IApiService<Road> apiService)
+            : this(view, apiService, null)
+        {
+
+        }
+
+        public RoadStatusPresenter(IView view, IApiService<Road> apiService, ILogger<RoadStatusPresenter> logger)
         {
             _view = view;
             _service = apiService;
+            _logger = logger;
         }
 
         /// <summary>
@@ -93,7 +103,8 @@ namespace TfLConsoleApp
             }
             catch(Exception e)
             {
-
+                _logger.LogError(e.Message);
+                throw;
             }
 
             return returnCode;

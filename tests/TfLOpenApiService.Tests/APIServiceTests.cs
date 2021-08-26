@@ -7,9 +7,6 @@ using Moq;
 
 using GenericServices;
 
-
-
-
 namespace TfLOpenApiService.Tests
 {
     [TestClass]

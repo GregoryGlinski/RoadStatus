@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Http;
 
+using Microsoft.Extensions.Logging;
+
 using GenericServices;
 
 using System.Text.Json;
@@ -20,6 +22,7 @@ namespace TfLOpenApiService
         //Property injection used as generic class prohibits constructor injection. This is set at creation in the factory.  
         public IUriService uriService { get; init; }
         public IHttpClientService httpClientServiceProvider { get; init; }
+        protected ILogger<ApiService<T>> logger { get; init; }
 
 
         public async Task<ApiServiceResponse<T>> GetApiServiceResponse(string id)
@@ -27,7 +30,7 @@ namespace TfLOpenApiService
             //Create instance of ApiServiceResponse<T> to return the processed response (or failure details).
             //HttpResponseMessage itself cannot be returned as it should be disposed.
             ApiServiceResponse<T> apiServiceResponse = new ApiServiceResponse<T>();
-       
+
             //Send request to API server and receive response
             HttpResponseMessage response = await httpClientServiceProvider.SendRequest(uriService.GetUri(id));
 
@@ -53,6 +56,14 @@ namespace TfLOpenApiService
                         apiServiceResponse.ResponseStatusCode = ResponseStatusCode.Other;
                         break;
                 }
+            }
+            catch(JsonException e)
+            {
+
+            }
+            catch(InvalidOperationException e)
+            {
+
             }
             catch(Exception e)
             {
