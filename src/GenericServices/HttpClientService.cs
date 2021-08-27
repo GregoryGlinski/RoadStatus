@@ -19,7 +19,7 @@ namespace GenericServices
 
                 response = await client.GetAsync(uri);
             }
-            catch(Exception e)
+            catch
             {
                 //Rethrow to caller
                 throw;

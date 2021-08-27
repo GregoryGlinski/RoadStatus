@@ -59,16 +59,23 @@ namespace TfLOpenApiService
             }
             catch(JsonException e)
             {
+                //Handle JsonException here
 
+                logger?.LogError(e.Message);
+                apiServiceResponse.Exception = e;
             }
             catch(InvalidOperationException e)
             {
+                //Handle InvalidOperationException here
 
+                logger?.LogError(e.Message);
+                apiServiceResponse.Exception = e;
             }
             catch(Exception e)
             {
-                //Does not alter apiServiceResponse.ResponseStatusCode leave in case an exception occurs after any HTTPStatusCode
+                logger?.LogError(e.Message);
                 apiServiceResponse.Exception = e;
+                throw;
             }
             finally
             {

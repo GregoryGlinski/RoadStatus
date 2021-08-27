@@ -35,7 +35,7 @@ namespace GenericServices
             }
             catch(SystemException e)
             {
-                _logger.LogError(e.Message);
+                _logger?.LogError(e.Message);
 
                 //Should really add specific exception type handling but in all cases this should rethrow the exception to be handled by the caller so effectively the same.
                 //No point trying to return the response

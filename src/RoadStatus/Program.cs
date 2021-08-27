@@ -40,7 +40,7 @@ namespace TfLConsoleApp
                 try
                 {
                     //Only place to handle a general unhandled System.Exception
-                    serviceProvider.GetService<ILogger<Program>>().LogError(message);
+                    serviceProvider.GetService<ILogger<Program>>()?.LogError(message);
                 }
                 catch
                 {
